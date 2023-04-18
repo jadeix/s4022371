@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Jade Tran - Theme: Climate</title>
+        <style>
+           .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+    </head>
+
+    <body style="background-color: rgb(27, 37, 113);">
+
+        <div class="row">
+            <div class="image-container"><img id="world" src="img/world.png" onmouseover="this.src='img/world dark.png';" onmouseout="this.src='img/world.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="clouds" src="img/clouds.png" onmouseover="this.src='img/clouds dark.png';" onmouseout="this.src='img/clouds.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="leaf" src="img/leaf.png" onmouseover="this.src='img/leaf dark.png';" onmouseout="this.src='img/leaf.png';" height="200" width="200"/></div>
+
+        </div>
+
+        <div class="row">
+             <div class="image-container"><img id="flower" src="img/flower.png" onmouseover="this.src='img/flower dark.png';" onmouseout="this.src='img/flower.png';" height="200" width="200"/></div>
+             <div class="image-container"><img id="cactus" src="img/cactus.png" onmouseover="this.src='img/cactus dark.png';" onmouseout="this.src='img/cactus.png';" height="200" width="200"/></div>
+             <div class="image-container"><img id="lizard" src="img/lizard.png" onmouseover="this.src='img/lizard dark.png';" onmouseout="this.src='img/lizard.png';" height="200" width="200"/></div>
+
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="tree" src="img/tree.png" onmouseover="this.src='img/tree dark.png';" onmouseout="this.src='img/tree.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="volcano" src="img/volcano.png" onmouseover="this.src='img/volcano dark.png';" onmouseout="this.src='img/volcano.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="beach" src="img/beach.png" onmouseover="this.src='img/beach dark.png';" onmouseout="this.src='img/beach.png';" height="200" width="200"/></div>
+        </div>
+
+
+        <script>
+            var sound1 = new buzz.sound("sound/fire.mp3");
+            var sound2 = new buzz.sound("sound/big rain.mp3");
+            var sound3 = new buzz.sound("sound/leaves.mp3");
+            var sound4 = new buzz.sound("sound/birds.mp3");
+            var sound5 = new buzz.sound("sound/wind.mp3");
+            var sound6 = new buzz.sound("sound/wind leaves.mp3");
+            var sound7 = new buzz.sound("sound/volcano.mp3");
+            var sound8 = new buzz.sound("sound/waves.mp3");
+            var sound9 = new buzz.sound("sound/bug.mp3")
+
+
+            window.onload = function() {
+                document.getElementById('world').addEventListener('click', function () {sound1.play();});
+                document.getElementById('clouds').addEventListener('click', function () {sound2.play();});
+                document.getElementById('leaf').addEventListener('click', function () {sound3.play();});
+                document.getElementById('flower').addEventListener('click', function () {sound4.play();});
+                document.getElementById('cactus').addEventListener('click', function () {sound5.play();});
+                document.getElementById('tree').addEventListener('click', function () {sound6.play();});
+                document.getElementById('volcano').addEventListener('click', function () {sound7.play();});
+                document.getElementById('beach').addEventListener('click', function () {sound8.play();});
+                document.getElementById('lizard').addEventListener('click', function () {sound9.play();});
+            }
+        </script>
+
+    </body>
+    
+</html>
